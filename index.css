@@ -1,0 +1,58 @@
+/* Add your CSS styles for the game interface here */
+/* Example: */
+body {
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.quiz-container {
+  width: 300px;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 30px;
+}
+.head{
+  font-size: 28px;
+  font-weight: bold;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+button {
+  background-color: #0657a2; /* Green */
+  border: none;
+  color: white;
+  border-radius: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.option {
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+}
+#result{
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  padding: 15px;
+}
+#pokemon-image{
+  width: 300px;
+  height: 240px;
+  margin-bottom: 20px
+}
+#scoreElement{
+  margin-top: 30px;
+  font-size: 20px;
+  padding-left: 90px;
+  font-weight: bold;
+}
