@@ -1,58 +1,115 @@
-/* Add your CSS styles for the game interface here */
-/* Example: */
+/* Base font and color for the body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins";
   color: black;
 }
 
+/* Quiz container properties */
 .quiz-container {
-  width: 300px;
+  max-width: 800px;
   margin: 0 auto;
-  /* text-align: center; */
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
+/* Header formatting */
+.head {
+  font-size: 35px;
+  padding: 30px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Option display */
 #options {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-left: 30px;
+  margin-left: 100px;
 }
-.head{
-  font-size: 28px;
-  font-weight: bold;
-  padding-top:15px;
-  padding-bottom:15px;
-}
+
+/* Button  */
 button {
-  background-color: #0657a2; /* Green */
+  margin-left: 10px;
+  margin-top: 10px;
+
+  background-color: #3678dc;
   border: none;
-  color: white;
+  color: #ffffff;
+  font-weight: 700;
   border-radius: 10px;
   text-transform: capitalize;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
+
+/* Option button properties */
 .option {
-  width: 120px;
+  width: calc(40% - 10px); /* Two options per row for larger screens */
+  max-width: 350px;
   height: 50px;
   cursor: pointer;
 }
-#result{
-  font-weight: bold;
+
+/* Result display formatting */
+#result {
+  font-weight: 700;
   text-align: center;
-  font-size: 35px;
-  padding: 15px;
+  height: 30px;
+  padding-bottom: 30px;
+  font-size: 32px;
+  padding: 15px 0;
 }
-#pokemon-image{
-  width: 300px;
-  height: 240px;
-  margin-bottom: 20px
+
+/* Pokemon image display */
+#pokemon-image {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 200px;
+  max-width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto 20px;
 }
-#scoreElement{
-  margin-top: 30px;
-  font-size: 20px;
-  padding-left: 90px;
+
+/* Score presentation */
+#scoreElement {
+  margin-top: 20px;
+  font-size: 25px;
+  text-align: center;
+  padding-right: 20px;
+  padding-top: 20px;
   font-weight: bold;
+}
+
+/* Button for smaller screens */
+@media screen and (max-width: 600px) {
+  .option {
+    width: 80%;
+    max-width: none;
+  }
+  #options {
+    margin-left: 10px;
+  }
+  #result {
+    font-size: 25px;
+    height: 10px;
+  }
+  #scoreElement,
+  #pokemon-image {
+    padding: 0;
+  }
+  #pokemon-image {
+    height: 150px;
+  }
+  button {
+    margin-left: 22px;
+    padding: 0;
+    width: 80%;
+  }
+
+  .head {
+    font-size: 25px;
+    padding: 10px 0;
+  }
 }
