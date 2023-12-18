@@ -3,13 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Pokemon Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/pokeman_ball.png" />
     <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
+    <header class="header">
+      <nav>
+        <div class="logo">
+          <a href="index.html">Pokemon<span>Q</span></a>
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Quiz</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Connect</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="quiz-container">
       <div class="head">Who's this Pokemon?</div>
       <div id="result"></div>
-      <img id="pokemon-image" src="" alt="Pokemon Image" />
+      <div class="img"><img id="pokemon-image" src="" alt="Pokemon Image" /></div>
       <div id="options">
         <button
           id="option1"
@@ -32,10 +50,7 @@
           onclick="checkAnswer(this)"
         ></button>
       </div>
-
       <div id="scoreElement"></div>
     </div>
-
-    <script src="./index.js"></script>
   </body>
 </html>

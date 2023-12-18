@@ -54,6 +54,8 @@ function displayPokemon(pokemon) {
 
 // Render options with shuffled Pokemon names
 function renderOptions(pokemonNames) {
+  console.log("" == [])
+
   for (let i = 0; i < pokemonNames.length; i++) {
     const optionBtn = document.getElementById(`option${i + 1}`);
     optionBtn.textContent = pokemonNames[i];
